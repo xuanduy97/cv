@@ -16,12 +16,14 @@ class Home extends StatelessWidget {
 
   AppBar _buildAppBar() {
     return AppBar(
+      // backgroundColor: tdBGColor,
       elevation: 0,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Icon(
             Icons.menu,
+            // color: tdBlack,
             size: 30,
           ),
           Container(
@@ -29,7 +31,8 @@ class Home extends StatelessWidget {
             width: 40,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset('assets/images/avatar.png'),
+              child: Image.asset('assets/images/avatar.png'
+              ),
             ),
           )
         ],
