@@ -6,6 +6,36 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: const Text('Home'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Business'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('School'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: _buildAppBar(),
       body: Column(
         children: [
@@ -21,11 +51,12 @@ class Home extends StatelessWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            Icons.menu,
-            // color: tdBlack,
-            size: 30,
-          ),
+          Container(),
+          // Icon(
+          //   Icons.menu,
+          //   // color: tdBlack,
+          //   size: 30,
+          // ),
           Container(
             height: 40,
             width: 40,
