@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/information_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -37,9 +38,13 @@ class Home extends StatelessWidget {
         ),
       ),
       appBar: _buildAppBar(),
-      body: Column(
-        children: [
-        ],
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            informationWidget(),
+          ],
+        ),
       ),
     );
   }
