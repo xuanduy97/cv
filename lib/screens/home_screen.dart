@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import '../widgets/daoukiwoom_exp.dart';
+import '../widgets/duyanh_sms.dart';
 import '../widgets/information_widget.dart';
+import '../widgets/lg_exp.dart';
+import '../widgets/vva.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -42,7 +46,11 @@ class Home extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            informationWidget(),
+            InformationWidget(),
+            DaouInnoEXP(),
+            LG_EXP(),
+            DuyAnh_SMS_EXP(),
+            VVA_EXP(),
           ],
         ),
       ),
