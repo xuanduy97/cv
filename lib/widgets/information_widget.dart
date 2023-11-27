@@ -59,111 +59,114 @@ class InformationWidget extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 5,top: 5, bottom: 5),
-                    child: Column(
-                      children: [
-                        Text(
-                          'MAI XUÂN DUY',
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold
+                    padding: EdgeInsets.only(left: 5),
+                    child: Container(
+                      width: size.width - 175,
+                      child: Column(
+                        children: [
+                          Text(
+                            'MAI XUÂN DUY',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Text(
-                          'Mobile Developer',
-                          style: TextStyle(
-                              fontSize: 12
+                          SizedBox(height: 5,),
+                          Text(
+                            'Mobile Developer',
+                            style: TextStyle(
+                                fontSize: 12
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Text(
-                          'Ho Chi Minh City University of Technology',
-                          style: TextStyle(
-                              fontSize: 8,
-                              fontWeight: FontWeight.bold
+                          SizedBox(height: 5,),
+                          Text(
+                            'Ho Chi Minh City University of Technology',
+                            style: TextStyle(
+                                fontSize: 8,
+                                fontWeight: FontWeight.bold
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Text(
-                          'Major: Electronics - Telecommunications Engineering',
-                          style: TextStyle(
-                              fontSize: 8
+                          SizedBox(height: 5,),
+                          Text(
+                            'Major: Electronics - Telecommunications Engineering',
+                            style: TextStyle(
+                                fontSize: 7
+                            ),
+                            textAlign: TextAlign.left,
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Text(
-                          'Aug 2015 - Nov 2021',
-                          style: TextStyle(
-                              fontSize: 7
+                          SizedBox(height: 5,),
+                          Text(
+                            'Aug 2015 - Nov 2021',
+                            style: TextStyle(
+                                fontSize: 7
+                            ),
+                            textAlign: TextAlign.left,
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Text(
-                          'GPA: 6.52/10',
-                          style: TextStyle(
-                              fontSize: 7
+                          SizedBox(height: 5,),
+                          Text(
+                            'GPA: 6.52/10',
+                            style: TextStyle(
+                                fontSize: 7
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-                            child: Text(
-                              'Objective',
-                              style: TextStyle(
-                                  fontSize: 12
+                          SizedBox(height: 5,),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+                              child: Text(
+                                'Objective',
+                                style: TextStyle(
+                                    fontSize: 12
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Container(
-                          width: size.width - 180,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5)
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Text(
-                              'Talented individual with in-depth knowledge of designing and development tools and coding languages.'
-                                  'Desirous of the role of Software Developer to apply 3 years of work experience in innovating'
-                                  'software designs, testing and coding as well as debugging programs and troubleshooting and'
-                                  ' augmenting the company’s reputation.',
-                              style: TextStyle(
-                                  fontSize: 8
+                          SizedBox(height: 5,),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(5)
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                'Talented individual with in-depth knowledge of designing and development tools and coding languages.'
+                                    'Desirous of the role of Software Developer to apply 3 years of work experience in innovating'
+                                    'software designs, testing and coding as well as debugging programs and troubleshooting and'
+                                    ' augmenting the company’s reputation.',
+                                style: TextStyle(
+                                    fontSize: 8
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(height: 5,),
-                        Container(
-                          width: size.width - 180,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5)
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Text(
-                              'Skill: Teamwork, Communication, Task and time management.'
-                              '\nLanguage: C, C++,C#, Java, JavaScipt, Dart.'
-                              '\nFramework: OData, Google Map API, xzing embedded API, DevExpress API, React Native, Flutter.'
-                              '\nDatabase: Microsoft SQL Server, SQLite.'
-                              '\nSoftware: Android Studio, Visual Code, Visual Studio Code, Microsoft Office.'
-                              '\nMore: Git-flow, Jira, Agile Scrum Process, ASPICE standard, Knowledge about Micro- Processor.',
-                              style: TextStyle(
-                                  fontSize: 8
-                              ),
-                            )
-                          ),
-                        )
-                      ],
+                          SizedBox(height: 5,),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(5)
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                'Skill: Teamwork, Communication, Task and time management.'
+                                '\nLanguage: C, C++,C#, Java, JavaScipt, Dart.'
+                                '\nFramework: OData, Google Map API, xzing embedded API, DevExpress API, React Native, Flutter.'
+                                '\nDatabase: Microsoft SQL Server, SQLite.'
+                                '\nSoftware: Android Studio, Visual Code, Visual Studio Code, Microsoft Office.'
+                                '\nMore: Git-flow, Jira, Agile Scrum Process, ASPICE standard, Knowledge about Micro- Processor.',
+                                style: TextStyle(
+                                    fontSize: 8
+                                ),
+                              )
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
