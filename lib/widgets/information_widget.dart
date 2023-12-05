@@ -111,16 +111,19 @@ class InformationWidget extends StatelessWidget {
                           ),
                           SizedBox(height: 5,),
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20)
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-                              child: Text(
-                                'Objective',
-                                style: TextStyle(
-                                    fontSize: 12
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+                                child: Text(
+                                  'Objective',
+                                  style: TextStyle(
+                                      fontSize: 12
+                                  ),
                                 ),
                               ),
                             ),
