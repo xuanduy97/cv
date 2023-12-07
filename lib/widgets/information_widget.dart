@@ -7,8 +7,8 @@ class InformationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    final _listInfo = ['Gender','Date of birth', 'Email', 'Address'];
-    final _listValue = ['Male','Aug 20, 1997', 'maixuanduy97@gmail.com', 'Hồ Chí Minh City, Việt Nam'];
+    final listInfo = ['Gender','Date of birth', 'Email', 'Address'];
+    final listValue = ['Male','Aug 20, 1997', 'maixuanduy97@gmail.com', 'Hồ Chí Minh City, Việt Nam'];
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: Container(
@@ -20,7 +20,7 @@ class InformationWidget extends StatelessWidget {
           padding: const EdgeInsets.all(5.0),
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Information",
                 style: TextStyle(
                     fontSize: 15,
@@ -44,7 +44,7 @@ class InformationWidget extends StatelessWidget {
                           Container(
                             width: 140,
                             height: 140,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 color: Colors.grey,
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
@@ -52,8 +52,8 @@ class InformationWidget extends StatelessWidget {
                                 )
                             ),
                           ),
-                          for(int i = 0; i < _listInfo.length && i < _listValue.length ; ++i )
-                            InformationItem(inforName : _listInfo[i] , inforValue: _listValue[i])
+                          for(int i = 0; i < listInfo.length && i < listValue.length ; ++i )
+                            InformationItem(inforName : listInfo[i] , inforValue: listValue[i])
                         ],
                       ),
                     ),
@@ -64,52 +64,52 @@ class InformationWidget extends StatelessWidget {
                       width: size.width - 175,
                       child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'MAI XUÂN DUY',
                             style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold
                             ),
                           ),
-                          SizedBox(height: 5,),
-                          Text(
+                          const SizedBox(height: 5,),
+                          const Text(
                             'Mobile Developer',
                             style: TextStyle(
                                 fontSize: 12
                             ),
                           ),
-                          SizedBox(height: 5,),
-                          Text(
+                          const SizedBox(height: 5,),
+                          const Text(
                             'Ho Chi Minh City University of Technology',
                             style: TextStyle(
                                 fontSize: 8,
                                 fontWeight: FontWeight.bold
                             ),
                           ),
-                          SizedBox(height: 5,),
-                          Text(
+                          const SizedBox(height: 5,),
+                          const Text(
                             'Major: Electronics - Telecommunications Engineering',
                             style: TextStyle(
                                 fontSize: 7
                             ),
                             textAlign: TextAlign.left,
                           ),
-                          SizedBox(height: 5,),
-                          Text(
+                          const SizedBox(height: 5,),
+                          const Text(
                             'Aug 2015 - Nov 2021',
                             style: TextStyle(
                                 fontSize: 7
                             ),
                             textAlign: TextAlign.left,
                           ),
-                          SizedBox(height: 5,),
-                          Text(
+                          const SizedBox(height: 5,),
+                          const Text(
                             'GPA: 6.52/10',
                             style: TextStyle(
                                 fontSize: 7
                             ),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Container(
@@ -117,7 +117,7 @@ class InformationWidget extends StatelessWidget {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                                 child: Text(
                                   'Objective',
@@ -128,14 +128,14 @@ class InformationWidget extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(5)
                             ),
-                            child: Padding(
-                              padding: EdgeInsets.all(5),
+                            child:const Padding(
+                              padding:  EdgeInsets.all(5),
                               child: Text(
                                 'Talented individual with in-depth knowledge of designing and development tools and coding languages.'
                                     'Desirous of the role of Software Developer to apply 3 years of work experience in innovating'
@@ -147,13 +147,13 @@ class InformationWidget extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(5)
                             ),
-                            child: Padding(
+                            child: const Padding(
                               padding: EdgeInsets.all(5),
                               child: Text(
                                 'Skill: Teamwork, Communication, Task and time management.'

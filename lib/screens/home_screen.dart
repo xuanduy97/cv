@@ -21,13 +21,13 @@ class Home extends StatelessWidget {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Home'),
+              title: const Text('Information'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Business'),
+              title: const Text('Experience'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -43,14 +43,14 @@ class Home extends StatelessWidget {
       ),
       appBar: _buildAppBar(),
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
             InformationWidget(),
             DaouInnoEXP(),
             LG_EXP(),
             DuyAnh_SMS_EXP(),
-            VVA_EXP(),
+            VvaExp(),
           ],
         ),
       ),
