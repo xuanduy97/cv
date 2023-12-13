@@ -10,6 +10,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _keyInfo = GlobalKey();
+    final _keyExp = GlobalKey();
     return Scaffold(
       drawer: Drawer(
         child: ListView(
@@ -23,12 +25,14 @@ class Home extends StatelessWidget {
             ListTile(
               title: const Text('Information'),
               onTap: () {
+                _scrollToItem(_keyInfo);
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: const Text('Experience'),
               onTap: () {
+                _scrollToItem(_keyExp);
                 Navigator.pop(context);
               },
             ),
@@ -43,18 +47,32 @@ class Home extends StatelessWidget {
       ),
       appBar: _buildAppBar(),
       backgroundColor: Colors.white,
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            InformationWidget(),
-            DaouInnoEXP(),
-            LG_EXP(),
-            DuyAnh_SMS_EXP(),
-            VvaExp(),
+            Container(
+                key: _keyInfo,
+                child: InformationWidget()),
+            Container(
+              key: _keyExp,
+                child: const Column(
+                  children: [
+                    DaouInnoEXP(),
+                    LG_EXP(),
+                    DuyAnh_SMS_EXP(),
+                    VvaExp(),
+                  ],
+                )
+            ),
           ],
         ),
       ),
     );
+  }
+
+  Future _scrollToItem(GlobalKey key) async{
+    final context = key.currentContext!;
+    await Scrollable.ensureVisible(context);
   }
 
   AppBar _buildAppBar() {
