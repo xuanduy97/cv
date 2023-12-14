@@ -12,7 +12,7 @@ class ExperienceWidget extends StatefulWidget {
 }
 
 class _ExperienceWidgetState extends State<ExperienceWidget> {
-  bool isShowFull = true;
+  bool isShowFull = false;
   Exp exp;
   _ExperienceWidgetState(this.exp);
   @override
@@ -96,16 +96,29 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                         fontSize: 12,
                         color: Colors.black
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    width: 30,
+                    height: 30,
+                    child: Visibility(
+                      visible: !isShowFull,
+                      child: IconButton(
+                        onPressed: (){
+                          setState(() {
+                            isShowFull = true;
+                          });
+                        },
+                        icon: Image.asset('assets/images/avatar.png'),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
-              isShowFull ? TextButton(
-                key: GlobalKey(), onPressed: () {
-                  setState(() {
-                    isShowFull = false;
-                  });
-              }, child: const Text("More Information"),
-              ) : Container()
+              Visibility(
+                visible: isShowFull,
+                child: const Text("More Information"),
+              ),
             ],
           ),
         )

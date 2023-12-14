@@ -10,8 +10,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _keyInfo = GlobalKey();
-    final _keyExp = GlobalKey();
+    final keyInfo = GlobalKey();
+    final keyExp = GlobalKey();
+    final keySchool = GlobalKey();
     return Scaffold(
       drawer: Drawer(
         child: ListView(
@@ -23,22 +24,59 @@ class Home extends StatelessWidget {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Information'),
+              title: const  Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Image(
+                      image: AssetImage('assets/images/information.png'),
+                      height: 30,
+                      width: 30,
+                    ),
+                  ),
+                  Text('Information')
+                ],
+              ),
               onTap: () {
-                _scrollToItem(_keyInfo);
+                _scrollToItem(keyInfo);
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Experience'),
+              title: const  Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Image(
+                      image: AssetImage('assets/images/experience.png'),
+                      height: 30,
+                      width: 30,
+                    ),
+                  ),
+                  Text('Experience')
+                ],
+              ),
               onTap: () {
-                _scrollToItem(_keyExp);
+                _scrollToItem(keyExp);
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('School'),
+              title: const  Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Image(
+                      image: AssetImage('assets/images/school.png'),
+                      height: 30,
+                      width: 30,
+                    ),
+                  ),
+                  Text('School')
+                ],
+              ),
               onTap: () {
+                _scrollToItem(keySchool);
                 Navigator.pop(context);
               },
             ),
@@ -51,10 +89,11 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                key: _keyInfo,
-                child: InformationWidget()),
+                key: keyInfo,
+                child: const InformationWidget()
+            ),
             Container(
-              key: _keyExp,
+              key: keyExp,
                 child: const Column(
                   children: [
                     DaouInnoEXP(),
@@ -62,6 +101,12 @@ class Home extends StatelessWidget {
                     DuyAnh_SMS_EXP(),
                     VvaExp(),
                   ],
+                )
+            ),
+            Container(
+                key: keySchool,
+                child: Container(
+                  height: 100,
                 )
             ),
           ],
@@ -83,18 +128,12 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(),
-          // Icon(
-          //   Icons.menu,
-          //   // color: tdBlack,
-          //   size: 30,
-          // ),
           Container(
             height: 40,
             width: 40,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset('assets/images/avatar.png'
-              ),
+              child: Image.asset('assets/images/avatar.png'),
             ),
           )
         ],
