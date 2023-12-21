@@ -1,3 +1,4 @@
+import 'package:cv/widgets/more_exp_widget.dart';
 import 'package:flutter/material.dart';
 import '../models/experience.dart';
 
@@ -17,6 +18,7 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
   _ExperienceWidgetState(this.exp);
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Padding(
         padding: const EdgeInsets.all(5.0),
         child: Container(
@@ -41,12 +43,15 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                       ),
                     ),
                   ),
-                  Text(
-                    exp.companyName,
-                    style:const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black
+                  SizedBox(
+                    width: size.width - 45,
+                    child: Text(
+                      exp.companyName,
+                      style:const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black
+                      ),
                     ),
                   ),
                 ],
@@ -96,29 +101,23 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                         fontSize: 12,
                         color: Colors.black
                     ),
-                  ),
-                  SizedBox(
-                    width: 30,
-                    height: 30,
-                    child: Visibility(
-                      visible: !isShowFull,
-                      child: IconButton(
-                        onPressed: (){
-                          setState(() {
-                            isShowFull = true;
-                          });
-                        },
-                        icon: Image.asset('assets/images/avatar.png'),
-                      ),
-                    ),
-                  ),
-
+                  )
                 ],
               ),
               Visibility(
                 visible: isShowFull,
-                child: const Text("More Information"),
+                child: const MoreExpWidget(),
               ),
+              TextButton(
+                  onPressed:() {
+                    setState(() {
+                      isShowFull = !isShowFull;
+                    });
+                  },
+                  child: Text(
+                      isShowFull? "Show less" : "Show more"
+                  )
+              )
             ],
           ),
         )
