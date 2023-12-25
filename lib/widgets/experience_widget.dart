@@ -5,17 +5,15 @@ import '../models/experience.dart';
 class ExperienceWidget extends StatefulWidget {
 
   final Exp exp;
-  bool isShowFull = true;
-  ExperienceWidget({super.key,required this.exp});
+  const ExperienceWidget({super.key,required this.exp});
 
   @override
-  State<ExperienceWidget> createState() => _ExperienceWidgetState(exp);
+  State<ExperienceWidget> createState() => _ExperienceWidgetState();
 }
 
 class _ExperienceWidgetState extends State<ExperienceWidget> {
   bool isShowFull = false;
-  Exp exp;
-  _ExperienceWidgetState(this.exp);
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -46,7 +44,7 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                   SizedBox(
                     width: size.width - 45,
                     child: Text(
-                      exp.companyName,
+                      widget.exp.companyName,
                       style:const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -72,7 +70,7 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                     ),
                   ),
                   Text(
-                    exp.jobTitle,
+                    widget.exp.jobTitle,
                     style:const TextStyle(
                         fontSize: 13,
                         color: Colors.white
@@ -96,7 +94,7 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
                     ),
                   ),
                   Text(
-                    '${exp.getBeginDate()} ~ ${exp.getEndDate()}',
+                    '${widget.exp.getBeginDate()} ~ ${widget.exp.getEndDate()}',
                     style: const TextStyle(
                         fontSize: 12,
                         color: Colors.black
@@ -106,7 +104,7 @@ class _ExperienceWidgetState extends State<ExperienceWidget> {
               ),
               Visibility(
                 visible: isShowFull,
-                child: const MoreExpWidget(),
+                child: MoreExpWidget(exp: widget.exp,),
               ),
               TextButton(
                   onPressed:() {
