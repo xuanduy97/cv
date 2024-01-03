@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import '../widgets/information_widget.dart';
 import '../widgets/daoukiwoom_exp.dart';
 import '../widgets/lg_exp.dart';
@@ -15,13 +16,35 @@ class Home extends StatelessWidget {
     final keySchool = GlobalKey();
     return Scaffold(
       drawer: Drawer(
+        width: 250,
         child: ListView(
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: TextButton(
+                          onPressed: () {
+                            launchUrlString('https://github.com/xuanduy97');
+                          },
+                          child: Text('Mai Xuân Duy'),
+                      ),
+
+                    ),
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image(
+                          image: AssetImage('assets/images/icon_no_image.png'),
+                          height: 80,
+                          width: 60,
+                        )
+                    ),
+                  ],
+                ),
+
             ),
             ListTile(
               title: const  Row(
@@ -122,7 +145,6 @@ class Home extends StatelessWidget {
 
   AppBar _buildAppBar() {
     return AppBar(
-      // backgroundColor: tdBGColor,
       elevation: 0,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
